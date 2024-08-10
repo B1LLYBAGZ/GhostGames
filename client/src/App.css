@@ -68,3 +68,9 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+
+@media (min-width: 1200px) {
+  .css-1oqqzyl-MuiContainer-root {
+    max-width: 1600px !important;
+  }

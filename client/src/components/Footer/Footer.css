@@ -1,0 +1,15 @@
+.custom-footer {
+  /* Add your custom styles here */
+  background-color: #333 !important; /* Example: Change background color */
+  color: #fff; /* Example: Change text color */
+  padding: 20px 0; /* Example: Adjust padding */
+}
+
+.custom-footer .MuiContainer-root {
+  max-width: 100% !important; /* Ensure full width */
+}
+
+.custom-footer .MuiPaper-root {
+  background-color: #444; /* Example: Change paper background color */
+  color: #fff; /* Example: Change paper text color */
+}

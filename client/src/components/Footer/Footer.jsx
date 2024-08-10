@@ -11,11 +11,18 @@ import {
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import "./Footer.css"; // Import the CSS file
 
 const Footer = () => {
   return (
     <Box
-      sx={{ bgcolor: "primary.main", color: "white", py: 6, width: "100%" }}
+      className="custom-footer"
+      sx={{
+        bgcolor: "var(--tuna)",
+        color: "var(--silver-sand)",
+        py: 3,
+        width: "100%",
+      }}
       component="footer"
     >
       <Container maxWidth={false} sx={{ maxWidth: "100% !important" }}>
@@ -23,7 +30,12 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Paper
               elevation={3}
-              sx={{ p: 2, bgcolor: "primary.dark", color: "white" }}
+              sx={{
+                p: 2,
+                bgcolor: "var(--mine-shaft)",
+                color: "var(--silver-sand)",
+                height: "100%",
+              }}
             >
               <Typography variant="h6" gutterBottom>
                 Contact Us
@@ -46,10 +58,15 @@ const Footer = () => {
               </IconButton>
             </Paper>
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={4}>
             <Paper
               elevation={3}
-              sx={{ p: 2, bgcolor: "primary.dark", color: "white" }}
+              sx={{
+                p: 2,
+                bgcolor: "var(--mine-shaft)",
+                color: "var(--silver-sand)",
+                height: "100%",
+              }}
             >
               <Typography variant="h6" gutterBottom>
                 Visit Us

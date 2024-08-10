@@ -10,3 +10,18 @@
   --jumbo: #7c7c84;
   --tuna: #3c3c44;
 }
+
+body {
+  background-color: var(--silver-sand);
+  color: var(--black);
+}
+
+.header {
+  background-color: var(--harlequin);
+  color: var(--mine-shaft);
+}
+
+.footer {
+  background-color: var(--tuna);
+  color: var(--silver-sand);
+}
