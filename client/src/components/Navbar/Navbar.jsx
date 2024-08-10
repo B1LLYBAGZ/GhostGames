@@ -79,13 +79,17 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton>
         
+          <img src="../../img/newLogo.png" alt="Logo" style={{ width: '200px', height: 'auto' }}/>
           <Typography
-            variant="h6"
+            variant="h1"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, 
+            fontSize: '30px'
+          }}
+            
           >
-            Ghost Events and Gaming
+            {/* Ghost Events and Gaming */}
           </Typography>
           {/* {isLoggedIn ? (
             <>
