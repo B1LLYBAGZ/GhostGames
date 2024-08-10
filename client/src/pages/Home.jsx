@@ -46,7 +46,7 @@ const Home = () => {
     <Container className="container">
       <Box sx={{ textAlign: "center", mt: 5 }}>
         <Typography variant="h2" component="h1" gutterBottom>
-          Welcome to My Website
+          Welcome to Ghost Events and Gaming
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
           This is a basic home page styled with MUI.
