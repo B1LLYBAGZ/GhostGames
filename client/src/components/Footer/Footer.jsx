@@ -18,7 +18,7 @@ const Footer = () => {
       sx={{ bgcolor: "primary.main", color: "white", py: 6, width: "100%" }}
       component="footer"
     >
-      <Container maxWidth={false}>
+      <Container maxWidth={false} sx={{ maxWidth: "100% !important" }}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
             <Paper

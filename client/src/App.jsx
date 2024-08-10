@@ -6,10 +6,15 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+      <div
+        className="app"
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
