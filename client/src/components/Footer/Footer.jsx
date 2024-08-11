@@ -15,28 +15,11 @@ import "./Footer.css"; // Import the CSS file
 
 const Footer = () => {
   return (
-    <Box
-      className="custom-footer"
-      sx={{
-        bgcolor: "var(--tuna)",
-        color: "var(--silver-sand)",
-        py: 3,
-        width: "100%",
-      }}
-      component="footer"
-    >
-      <Container maxWidth={false} sx={{ maxWidth: "100% !important" }}>
-        <Grid container spacing={4}>
+    <Box className="custom-footer" component="footer">
+      <Container maxWidth={false} className="footer-container">
+        <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} md={4}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 2,
-                bgcolor: "var(--mine-shaft)",
-                color: "var(--silver-sand)",
-                height: "100%",
-              }}
-            >
+            <Paper elevation={3} className="footer-paper">
               <Typography variant="h6" gutterBottom>
                 Contact Us
               </Typography>
@@ -59,15 +42,7 @@ const Footer = () => {
             </Paper>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 2,
-                bgcolor: "var(--mine-shaft)",
-                color: "var(--silver-sand)",
-                height: "100%",
-              }}
-            >
+            <Paper elevation={3} className="footer-paper">
               <Typography variant="h6" gutterBottom>
                 Visit Us
               </Typography>

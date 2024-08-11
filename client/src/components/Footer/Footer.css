@@ -1,15 +1,23 @@
 .custom-footer {
-  /* Add your custom styles here */
-  background-color: #333 !important; /* Example: Change background color */
-  color: #fff; /* Example: Change text color */
-  padding: 20px 0; /* Example: Adjust padding */
+  background-color: var(--tuna);
+  color: var(--silver-sand);
+  padding: 20px 0;
+  width: 100%;
+  padding-bottom: 20px; /* Added padding to the bottom of the footer */
 }
 
-.custom-footer .MuiContainer-root {
-  max-width: 100% !important; /* Ensure full width */
+.footer-container {
+  max-width: 100% !important;
 }
 
-.custom-footer .MuiPaper-root {
-  background-color: #444; /* Example: Change paper background color */
-  color: #fff; /* Example: Change paper text color */
+.footer-paper {
+  background-color: var(--mine-shaft);
+  color: var(--silver-sand);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
 }
