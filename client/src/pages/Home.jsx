@@ -49,11 +49,11 @@ const Home = () => {
           Welcome to Ghost Events and Gaming
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          This is a basic home page styled with MUI.
+          Your Local Card Shop
         </Typography>
-        <Button variant="contained" color="primary" sx={{ mt: 3 }}>
+        {/* <Button variant="contained" color="primary" sx={{ mt: 3 }}>
           Get Started
-        </Button>
+        </Button> */}
       </Box>
       <Box sx={{ mt: 5 }}>
         <Slider {...settings}>
