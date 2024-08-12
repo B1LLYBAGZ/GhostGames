@@ -42,9 +42,8 @@ const client = new ApolloClient({
 });
 
 function App() {
-<<<<<<< HEAD
   return (
-    
+    <React.StrictMode>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
@@ -53,36 +52,15 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Contact" element={<Contact />} />
-              <Route path="/About" element={<AboutPage />} />
+              <Route path="/login" element={<LogIn />} />
+              <Route path="/signup" element={<SignUp />} />
             </Routes>
             <Footer />
           </div>
         </Router>
       </ThemeProvider>
-  
+    </React.StrictMode>
   );
 }
-=======
-return (
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <div className="app">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Contact" element={<Contact/>} />
-            
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
-  </React.StrictMode>
- 
-)
-};
->>>>>>> main
 
 export default App;
