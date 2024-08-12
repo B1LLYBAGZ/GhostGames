@@ -99,6 +99,18 @@ const SignUp = () => {
                 <TextField
                   required
                   fullWidth
+                  id="userName"
+                  label="Username"
+                  name="userName"
+                  onChange={(e) =>
+                    setFormState({ ...formState, username: e.target.value })
+                  }
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
                   id="email"
                   label="Email Address"
                   name="email"
