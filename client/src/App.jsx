@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer"; // Import the Footer component
 import "./App.css";
+import LogIn from "./pages/LogIn"; // Importing the LogIn
+import SignUp from "./pages/SignUp"; // Importing the SignUp
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@mui/material/styles";
@@ -19,6 +21,8 @@ ReactDOM.render(
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
           <Footer />
         </div>
