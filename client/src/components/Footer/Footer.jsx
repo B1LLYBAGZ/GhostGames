@@ -11,20 +11,15 @@ import {
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import "./Footer.css"; // Import the CSS file
 
 const Footer = () => {
   return (
-    <Box
-      sx={{ bgcolor: "primary.main", color: "white", py: 6, width: "100%" }}
-      component="footer"
-    >
-      <Container maxWidth={false}>
-        <Grid container spacing={4}>
+    <Box className="custom-footer" component="footer">
+      <Container maxWidth={false} className="footer-container">
+        <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} md={4}>
-            <Paper
-              elevation={3}
-              sx={{ p: 2, bgcolor: "primary.dark", color: "white" }}
-            >
+            <Paper elevation={3} className="footer-paper">
               <Typography variant="h6" gutterBottom>
                 Contact Us
               </Typography>
@@ -46,11 +41,8 @@ const Footer = () => {
               </IconButton>
             </Paper>
           </Grid>
-          <Grid item xs={12} md={8}>
-            <Paper
-              elevation={3}
-              sx={{ p: 2, bgcolor: "primary.dark", color: "white" }}
-            >
+          <Grid item xs={12} md={4}>
+            <Paper elevation={3} className="footer-paper">
               <Typography variant="h6" gutterBottom>
                 Visit Us
               </Typography>
