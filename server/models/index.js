@@ -3,4 +3,4 @@
 // const Cart = require("./Cart.js");
 const User = require("./User");
 
-module.exports = { User, Product, Cart };
+module.exports = { User };
