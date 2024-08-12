@@ -10,6 +10,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import AboutPage from "./pages/About";
+import Yugioh from "./pages/Yugioh";
+import Magic from "./pages/Magic";
+import Pokemon from "./pages/Pokemon";
 import Footer from "./components/Footer/Footer"; // Import the Footer component
 import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
