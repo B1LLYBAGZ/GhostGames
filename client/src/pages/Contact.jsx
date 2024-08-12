@@ -4,7 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useEffect, useState} from 'react';
 import emailjs from '@emailjs/browser'
-
+import { validateEmail } from '../utils/helpers';
+import Container from '@mui/material/Container'
 
 export default function HelperTextAligned() {
   const [formState, setFormState] = useState({customer_name: "", customer_email: "", message:""})
@@ -45,36 +46,38 @@ export default function HelperTextAligned() {
         
     } 
     
-    const submitHandler = () => {
+    const submitHandler = (e) => {
         e.preventDefault();
+if (!validateEmail(formState.customer_email) || !formState.message) {
+ console.log("Email and message are required");
 
-        console.log(submitHandler);
-        
+ return;
+}
+emailjs.send("service_gz74o9s", "template_ea19oe4", formState);  
+        console.log("Email successfully sent");
+        setFormState({customer_name: "", customer_email: "", message:""})
     }
     
   
   
   
     return (
+      <>
+      <Container className="container">
     <Box
      component="form"
      onSubmit={submitHandler}
       sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        width: '100%',
+        textAlign: 'center',
+        mt: 5
+        // display: 'flex',
+        // flexDirection: 'column',
+        // alignItems: 'center',
+        // justifyContent: 'center',
+        // width: '100%',
       }}
     >
-      <Box
-
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          width: '50%',
-          marginLeft: 'auto', // Push the form to the right
-        }}
-      >
+  
         <TextField
           helperText=" "
           value={formState.customer_name}
@@ -111,6 +114,7 @@ export default function HelperTextAligned() {
           <Button variant="contained" type="submit">Send Message</Button>
         </Box>
       </Box>
-    </Box>
+      </Container>
+      </>
   );
 }
