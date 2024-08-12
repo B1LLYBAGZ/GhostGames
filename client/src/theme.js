@@ -64,7 +64,22 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          borderRadius: "4px",
+          backgroundColor: colors.gunsmoke,
+        },
+      },
+    },
+    MuiCarousel: {
+      styleOverrides: {
+        root: {
+          backgroundColor: colors.gunsmoke,
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: colors.gunsmoke,
+          color: colors.black,
         },
       },
     },
