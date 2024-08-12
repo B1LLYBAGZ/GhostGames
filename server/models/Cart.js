@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const { Schema, model } = require("mongoose");
 
 const cartSchema = new Schema({
   items: {
@@ -9,4 +8,4 @@ const cartSchema = new Schema({
 });
 
 const Cart = model("Cart", cartSchema);
-module.exports = { Cart };
+module.exports = Cart;
