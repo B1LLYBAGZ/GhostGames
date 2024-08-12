@@ -12,24 +12,23 @@ import theme from "./theme.js";
 import "./main.css"; // Import your CSS variables
 
 function App() {
-return (
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <div className="app">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Contact" element={<Contact/>} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
-  </React.StrictMode>
- 
-)
-};
+  return (
+    <React.StrictMode>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <div className="app">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Contact" element={<Contact />} />
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </ThemeProvider>
+    </React.StrictMode>
+  );
+}
 
 export default App;
