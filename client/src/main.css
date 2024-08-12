@@ -9,6 +9,7 @@
   --gunsmoke: #7c8484;
   --jumbo: #7c7c84;
   --tuna: #3c3c44;
+  font-family: "Audiowide", sans-serif !important; /* Set the main font and use !important */
 }
 
 body {
