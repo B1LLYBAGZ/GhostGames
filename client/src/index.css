@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: var(--silver-sand);
-  background-color: var(--mine-shaft);
+  /* background-color: var(--mine-shaft); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

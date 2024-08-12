@@ -1,9 +1,10 @@
 .custom-footer {
-  background-color: var(--tuna);
+  background-color: var(--gunsmoke); /* Use the Gun Smoke Gray variable */
   color: var(--silver-sand);
   padding: 20px 0;
   width: 100%;
-  padding-bottom: 20px; /* Added padding to the bottom of the footer */
+  padding-bottom: 20px;
+  border-radius: 5px; /* Added padding to the bottom of the footer */
 }
 
 .footer-container {
@@ -11,7 +12,6 @@
 }
 
 .footer-paper {
-  background-color: var(--mine-shaft);
   color: var(--silver-sand);
   height: 100%;
   display: flex;
@@ -20,4 +20,11 @@
   align-items: center;
   text-align: center;
   padding: 16px;
+}
+
+/* Override MUI Paper component background color */
+.custom-footer .MuiPaper-root {
+  background-color: var(
+    --harlequin
+  ) !important; /* Use the Harlequin Green variable */
 }
