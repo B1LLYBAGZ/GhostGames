@@ -79,7 +79,7 @@ export default function SearchAppBar() {
           </IconButton>
 
           <img
-            src="../../img/newLogo.png"
+            src="../../img/bestLogo.png"
             alt="Logo"
             style={{ width: "200px", height: "auto" }}
           />
