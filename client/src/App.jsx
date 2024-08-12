@@ -11,7 +11,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme.js";
 import "./main.css"; // Import your CSS variables
 
-ReactDOM.render(
+function App() {
+return (
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -26,8 +27,9 @@ ReactDOM.render(
         </div>
       </Router>
     </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+  </React.StrictMode>
+ 
+)
+};
 
 export default App;
