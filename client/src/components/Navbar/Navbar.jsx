@@ -57,6 +57,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const CustomAppBar = styled(AppBar)(({ theme }) => ({
+  backgroundColor: "var(--gunsmoke)", // Use the CSS variable for the background color
+}));
+
 export default function SearchAppBar() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -65,7 +69,7 @@ export default function SearchAppBar() {
   };
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className="navbar">
+      <CustomAppBar position="static" className="navbar">
         <Toolbar>
           <IconButton
             size="large"
@@ -79,7 +83,7 @@ export default function SearchAppBar() {
           </IconButton>
 
           <img
-            src="../../img/newLogo.png"
+            src="../../img/bestLogo.png"
             alt="Logo"
             style={{ width: "200px", height: "auto" }}
           />
@@ -128,7 +132,7 @@ export default function SearchAppBar() {
             />
           </Search>
         </Toolbar>
-      </AppBar>
+      </CustomAppBar>
       <TemporaryDrawer open={openDrawer} onClose={toggleDrawer} />
     </Box>
   );
