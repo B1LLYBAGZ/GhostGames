@@ -11,7 +11,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import { ADD_USER } from "../utils/mutations";
+import { ADD_USER } from "../utils/mutations";
 
 const theme = createTheme();
 
@@ -19,11 +19,12 @@ const SignUp = () => {
   const [formState, setFormState] = React.useState({
     firstName: "",
     lastName: "",
+    userName: "",
     email: "",
     password: "",
   });
 
-//   const [addUser, { error }] = useMutation(ADD_USER);
+  const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -33,6 +34,7 @@ const SignUp = () => {
         variables: {
           firstName: formState.firstName,
           lastName: formState.lastName,
+          userName: formState.userName,
           email: formState.email,
           password: formState.password,
         },
@@ -76,7 +78,7 @@ const SignUp = () => {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="first Name"
                   autoFocus
                   onChange={(e) =>
                     setFormState({ ...formState, firstName: e.target.value })
@@ -103,7 +105,7 @@ const SignUp = () => {
                   label="Username"
                   name="userName"
                   onChange={(e) =>
-                    setFormState({ ...formState, username: e.target.value })
+                    setFormState({ ...formState, userName: e.target.value })
                   }
                 />
               </Grid>
