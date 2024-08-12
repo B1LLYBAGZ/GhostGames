@@ -15,13 +15,3 @@ body {
   background-color: var(--silver-sand);
   color: var(--black);
 }
-
-.header {
-  background-color: var(--harlequin);
-  color: var(--mine-shaft);
-}
-
-.footer {
-  background-color: var(--tuna);
-  color: var(--silver-sand);
-}
