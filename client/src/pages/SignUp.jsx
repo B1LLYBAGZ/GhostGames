@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ADD_USER } from "../utils/mutations";
+// import Auth from "../utils/auth";
 
 const theme = createTheme();
 
@@ -39,8 +40,9 @@ const SignUp = () => {
           password: formState.password,
         },
       });
-
-      console.log("User created:", data);
+      const token = data.addUser.token;
+      Auth.login(token);
+      // console.log("User created:", data);
       // Redirect or update the UI as needed
     } catch (e) {
       console.error(e);
