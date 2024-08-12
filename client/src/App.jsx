@@ -13,7 +13,7 @@ import "./main.css"; // Import your CSS variables
 
 function App() {
 return (
-  <React.StrictMode>
+  
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
@@ -27,7 +27,7 @@ return (
         </div>
       </Router>
     </ThemeProvider>
-  </React.StrictMode>
+
  
 )
 };
