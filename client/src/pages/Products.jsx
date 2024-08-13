@@ -6,6 +6,7 @@ import productsData from "../../../server/seeders/productSeeds.json"; // Import 
 import "../App.css"; // Ensure this is the path to your common CSS file
 import { useLocation } from "react-router-dom";
 import Typography from "@mui/material/Typography"; // Import Typography
+import ErrorPage from "./Error.jsx"; // Import the ErrorPage component
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
@@ -23,6 +24,10 @@ const Products = () => {
     );
     setProducts(filteredProducts);
   }, [searchQuery]);
+
+  if (products.length === 0) {
+    return <ErrorPage message="No products found for your search query." />;
+  }
 
   return (
     <div className="app">
