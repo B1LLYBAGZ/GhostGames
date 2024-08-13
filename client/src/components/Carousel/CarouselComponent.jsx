@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { styled } from "@mui/material/styles";
+import productsData from "../../../../server/seeders/productSeeds.json"; // Import the JSON data
 
 const CustomPaper = styled(Paper)(({ theme }) => ({
   backgroundColor: "transparent !important", // Make the background transparent
@@ -22,28 +23,32 @@ const CarouselComponent = () => {
     autoplaySpeed: 2000,
   };
 
-  const cards = [
-    { id: 1, name: "Pikachu", image: "path/to/pikachu.jpg" },
-    { id: 2, name: "Charizard", image: "path/to/charizard.jpg" },
-    { id: 3, name: "Blue-Eyes White Dragon", image: "path/to/blue-eyes.jpg" },
-    { id: 4, name: "Dark Magician", image: "path/to/dark-magician.jpg" },
-    // Add more cards as needed
-  ];
+  // Limit the products to 5
+  const limitedProducts = productsData.slice(0, 5);
 
   return (
     <Box sx={{ mt: 5 }}>
       <CustomPaper>
         <Slider {...settings}>
-          {cards.map((card) => (
-            <Box key={card.id} sx={{ p: 2 }}>
+          {limitedProducts.map((product) => (
+            <Box key={product.name} sx={{ p: 2 }}>
               <Paper elevation={3} sx={{ p: 2, textAlign: "center" }}>
                 <img
-                  src={card.image}
-                  alt={card.name}
+                  src={product.image}
+                  alt={product.name}
                   style={{ width: "100%", height: "auto" }}
                 />
                 <Typography variant="h6" component="h3" gutterBottom>
-                  {card.name}
+                  {product.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {product.description}
+                </Typography>
+                <Typography variant="h6" color="text.primary">
+                  ${product.price}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Stock: {product.stock}
                 </Typography>
               </Paper>
             </Box>
