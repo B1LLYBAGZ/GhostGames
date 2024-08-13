@@ -7,7 +7,7 @@
     "image": "TBD"
   },
   {
-    "name": "Battles Of Legend: Terminal Revenge - Booster Box",
+    "name": "Battles of Legend: Terminal Revenge - Booster Box",
     "description": "Get awesome foil upgrades as well as sought-after tournament cards in Battles of Legend: Terminal Revenge.",
     "price": 79.34,
     "stock": 1,
@@ -42,32 +42,32 @@
     "image": "TBD"
   },
   {
-    "name": "",
-    "description": "",
-    "price": "",
-    "stock": "",
-    "iamge": ""
+    "name": "The Infinite Forbidden - Booster Pack",
+    "description": "The Infinite Forbidden contains 100 new cards in all, for a variety of strategies, new and old, including a brand-new World Premiere theme!",
+    "price": 4.99,
+    "stock": 1,
+    "image": "TBD"
   },
   {
-    "name": "",
-    "description": "",
-    "price": "",
-    "stock": "",
-    "iamge": ""
+    "name": "Battles of Legend: Terminal Revenge - Booster Pack",
+    "description": "As always with Battles of Legend sets, Battles of Legend: Terminal Revenge will feature a line-up of popular cards getting foil upgrades as well as some popular tournament cards you can use to up your game!",
+    "price": 4.99,
+    "stock": 1,
+    "image": "TBD"
   },
   {
-    "name": "",
-    "description": "",
-    "price": "",
-    "stock": "",
-    "iamge": ""
+    "name": "25th Anniversary Rarity Collection II - Booster Pack",
+    "description": "Whether you’re a collector or a competitive Duelist, 25th Anniversary Rarity Collection II is full of cards that everyone will want to get their hands on!",
+    "price": 9.99,
+    "stock": 1,
+    "image": "TBD"
   },
   {
-    "name": "",
-    "description": "",
-    "price": "",
-    "stock": "",
-    "iamge": ""
+    "name": "Legacy of Destruction - Booster Pack",
+    "description": "What kind of legacy will you leave? Cement your legend as a top-level Duelist with the latest core booster from the Yu-Gi-Oh! TRADING CARD GAME (TCG), Legacy of Destruction!",
+    "price": 4.99,
+    "stock": 1,
+    "image": "TBD"
   },
   {
     "name": "Scarlet & Violet - Twilight Masquerade Elite Trainer Box",
@@ -98,9 +98,23 @@
     "image": "TBD"
   },
   {
+    "name": "Scarlet & Violet - Twilight Masquerade - Booster Pack",
+    "description": "A Festival of Mischief & Mystery! Welcome to the land of Kitakami, where people and Pokémon live harmoniously with nature. ",
+    "price": 3.99,
+    "stock": 1,
+    "image": "TBD"
+  },
+  {
+    "name": "Sword & Shield - Vivid Voltage - Booster Pack",
+    "description": "Each Vivid Voltage booster pack contains 10 random cards.",
+    "price": 3.99,
+    "stock": 1,
+    "image": "TBD"
+  },
+  {
     "name": "Magic the Gathering: Lord of the Rings",
-    "description": "It’s time to take familiar favorites on a whole new adventure! Journey with the characters of Middle-earth and see how they’ve come to take their place in the newest Magic set.",
-    "price": 95.0,
+    "description": "It's time to take familiar favorites on a whole new adventure! Journey with the characters of Middle-earth and see how they’ve come to take their place in the newest Magic set.",
+    "price": 519.99,
     "stock": 1,
     "image": "TBD"
   },
@@ -108,6 +122,13 @@
     "name": "Magic the Gathering: Assassin's Creed",
     "description": "The only way to uncover the secrets of the past is to follow in the footsteps of the assassins who came before, and if you’ve learned anything, it’s that you must be swift, precise, and never show your hand.",
     "price": 47.99,
+    "stock": 1,
+    "image": "TBD"
+  },
+  {
+    "name": "Magic the Gathering: Lord of the Rings - Coolector Booster",
+    "description": "In secret, Sauron forged a booster—one far more powerful than those owned by Elf, Dwarf, or Man.",
+    "price": 48.2,
     "stock": 1,
     "image": "TBD"
   }
