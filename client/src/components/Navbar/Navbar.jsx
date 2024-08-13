@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
-
+import { useNavigate } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -64,10 +64,26 @@ const CustomAppBar = styled(AppBar)(({ theme }) => ({
 
 export default function SearchAppBar() {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const toggleDrawer = () => {
     setOpenDrawer((prevOpen) => !prevOpen);
   };
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/products?search=${searchQuery}`);
+  };
+
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CustomAppBar position="static" className="navbar">
@@ -102,21 +118,7 @@ export default function SearchAppBar() {
           >
             {/* Ghost Events and Gaming */}
           </Typography>
-          {/* {isLoggedIn ? (
-            <>
-              <Button variant="text" color="inherit" onClick={handleLogout}>
-                Logout
-              </Button>
-              <IconButton color="inherit" aria-label="add to shopping cart">
-                <AddShoppingCartIcon />
-              </IconButton>
-            </>
-          ) : (
-            <Button variant="text" color="inherit" onClick={handleLogin}>
-              Login
-            </Button>
-          )} */}
-          <Button variant="text" color="inherit">
+          <Button variant="text" color="inherit" onClick={handleLoginClick}>
             Login
           </Button>
           <Button variant="text" color="inherit">
@@ -125,15 +127,23 @@ export default function SearchAppBar() {
           <IconButton color="inherit" aria-label="add to shopping cart">
             <AddShoppingCartIcon />
           </IconButton>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+          <Box
+            component="form"
+            onSubmit={handleSearchSubmit}
+            sx={{ display: "flex" }}
+          >
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+            </Search>
+          </Box>
         </Toolbar>
       </CustomAppBar>
       <TemporaryDrawer open={openDrawer} onClose={toggleDrawer} />

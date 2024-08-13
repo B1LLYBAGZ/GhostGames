@@ -27,13 +27,13 @@ const Footer = () => {
                 <PhoneIcon sx={{ mr: 1 }} />
                 <Typography variant="body1">
                   Store Number:{" "}
-                  <Link href="tel:+1234567890" color="inherit">
-                    +1 (234) 567-890
+                  <Link href="tel:+7209551957" color="inherit">
+                    +17209551957
                   </Link>
                 </Typography>
               </Box>
               <IconButton
-                href="https://www.facebook.com/yourstore"
+                href="https://www.facebook.com/GhostEventsandGaming"
                 target="_blank"
                 color="inherit"
               >
@@ -49,12 +49,12 @@ const Footer = () => {
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
                 <LocationOnIcon sx={{ mr: 1 }} />
                 <Typography variant="body1">
-                  1234 Your Store Address, City, State, ZIP
+                  2120 S Holly St #9, Denver, CO 80222
                 </Typography>
               </Box>
               <iframe
                 title="store-location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0864873153!2d-122.419415484681!3d37.7749292797596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sYour%20Store%20Address!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12283.02187742133!2d-104.9216058!3d39.6777149!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7d607359343f%3A0x3876c92515834aa7!2sGhost%20Events%20and%20Gaming!5e0!3m2!1sen!2sus!4v1723502531050!5m2!1sen!2sus"
                 width="100%"
                 height="200"
                 style={{ border: 0 }}

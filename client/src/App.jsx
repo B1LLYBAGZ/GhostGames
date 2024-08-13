@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer"; // Import the Footer component
 import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
 import SignUp from "./pages/SignUp"; // Importing the SignUp
+import Products from "./pages/Products"; // Importing the Products page
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@mui/material/styles";
@@ -43,13 +44,19 @@ const client = new ApolloClient({
 
 function App() {
   return (
+<<<<<<< HEAD
     <React.StrictMode>
       <ApolloProvider client={client}>
+=======
+    <div className="app">
+      <div className="container">
+>>>>>>> main
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Router>
             <div className="app">
               <Navbar />
+<<<<<<< HEAD
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -57,12 +64,29 @@ function App() {
                 <Route path="/login" element={<LogIn />} />
                 <Route path="/signup" element={<SignUp />} />
               </Routes>
+=======
+              <div className="container">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Contact" element={<Contact />} />
+                  <Route path="/About" element={<AboutPage />} />
+                  <Route path="/login" element={<LogIn />} />
+                  <Route path="/signup" element={<SignUp />} />
+                  <Route path="/products" element={<Products />} />
+                </Routes>
+              </div>
+>>>>>>> main
               <Footer />
             </div>
           </Router>
         </ThemeProvider>
+<<<<<<< HEAD
       </ApolloProvider>
     </React.StrictMode>
+=======
+      </div>
+    </div>
+>>>>>>> main
   );
 }
 
