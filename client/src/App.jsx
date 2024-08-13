@@ -46,6 +46,28 @@ const client = new ApolloClient({
 
 function App() {
   return (
+    <div className="app">
+      <div className="container">
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <div className="app">
+              <Navbar />
+              <div className="container">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Contact" element={<Contact />} />
+                  <Route path="/About" element={<AboutPage />} />
+                  <Route path="/login" element={<LogIn />} />
+                  <Route path="/signup" element={<SignUp />} />
+                </Routes>
+              </div>
+              <Footer />
+            </div>
+          </Router>
+        </ThemeProvider>
+      </div>
+    </div>
     <React.StrictMode>
       <ThemeProvider theme={theme}>
         <CssBaseline />
