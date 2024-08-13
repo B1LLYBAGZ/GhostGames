@@ -27,13 +27,13 @@ const Footer = () => {
                 <PhoneIcon sx={{ mr: 1 }} />
                 <Typography variant="body1">
                   Store Number:{" "}
-                  <Link href="tel:+1234567890" color="inherit">
-                    +1 (234) 567-890
+                  <Link href="tel:+7209551957" color="inherit">
+                    +17209551957
                   </Link>
                 </Typography>
               </Box>
               <IconButton
-                href="https://www.facebook.com/yourstore"
+                href="https://www.facebook.com/GhostEventsandGaming"
                 target="_blank"
                 color="inherit"
               >

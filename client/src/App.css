@@ -11,6 +11,8 @@ html,
 body {
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px !important;
+  border: 1px solid transparent; /* Prevent margin collapsing */
 }
 
 #root {
@@ -31,6 +33,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   flex: 1;
+  margin: 0 auto; /* Center the container */
 }
 
 .logo {
@@ -69,8 +72,57 @@ body {
   color: #888;
 }
 
-@media (min-width: 1200px) {
-  .css-1oqqzyl-MuiContainer-root {
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 800px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 5px;
+  }
+}
+
+/* Remove max-width restriction for larger screens */
+@media (min-width: 1600px) {
+  .container {
     max-width: 1600px !important;
+  }
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  .read-the-docs {
+    font-size: 0.9em;
   }
 }
