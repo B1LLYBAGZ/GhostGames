@@ -15,6 +15,7 @@ import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
 import SignUp from "./pages/SignUp"; // Importing the SignUp
 import Products from "./pages/Products"; // Importing the Products page
+import ErrorPage from "./pages/Error"; // Importing the ErrorPage component
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@mui/material/styles";
@@ -46,27 +47,25 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <ApolloProvider client={client}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Router>
-              <div className="app">
-                <Navbar />
-                <div className="container">
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Contact" element={<Contact />} />
-                    <Route path="/About" element={<AboutPage />} />
-                    <Route path="/login" element={<LogIn />} />
-                    <Route path="/signup" element={<SignUp />} />
-                    <Route path="/products" element={<Products />} />
-                  </Routes>
-                </div>
-                <Footer />
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <div className="app">
+              <Navbar />
+              <div className="container">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Contact" element={<Contact />} />
+                  <Route path="/About" element={<AboutPage />} />
+                  <Route path="/login" element={<LogIn />} />
+                  <Route path="/signup" element={<SignUp />} />
+                  <Route path="/products" element={<Products />} />
+                </Routes>
               </div>
-            </Router>
-          </ThemeProvider>
-        </ApolloProvider>
+              <Footer />
+            </div>
+          </Router>
+        </ThemeProvider>
       </div>
     </div>
   );
