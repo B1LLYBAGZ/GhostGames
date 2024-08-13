@@ -73,6 +73,7 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
   
     return (
       <>
+      <div className="app">
       <Container className="container">
         <Box
           component="form"
@@ -123,6 +124,7 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
       
      
       </Container>
+      </div>
       {/* Modal component */}
       <Modal
         open={isModalOpen}
