@@ -11,6 +11,7 @@ import {
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ContactMailIcon from '@mui/icons-material/ContactMail';
 import "./Footer.css"; // Import the CSS file
 
 const Footer = () => {
@@ -23,12 +24,22 @@ const Footer = () => {
               <Typography variant="h6" gutterBottom>
                 Contact Us
               </Typography>
-              <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", mb: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", mt: 3, mb: 3 }}>
                 <PhoneIcon sx={{ mr: 1 }} />
                 <Typography variant="body1">
                   Store Number:{" "}
                   <Link href="tel:+7209551957" color="inherit">
                     +17209551957
+                  </Link>
+                </Typography>
+                </Box>
+                <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+                <ContactMailIcon sx={{ mr: 1 }} />
+                <Typography variant="body1">
+                  
+                  <Link href="/Contact" color="inherit">
+                  Send a Message
                   </Link>
                 </Typography>
               </Box>
@@ -37,8 +48,9 @@ const Footer = () => {
                 target="_blank"
                 color="inherit"
               >
-                <FacebookIcon style={{ fontSize: 50 }}  />
+                <FacebookIcon style={{ fontSize: 40 }}  />
               </IconButton>
+              </Box>
             </Paper>
           </Grid>
           <Grid item xs={12} md={4}>

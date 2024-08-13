@@ -9,7 +9,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import EventIcon from '@mui/icons-material/Event';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import InfoIcon from '@mui/icons-material/Info';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
@@ -26,9 +27,15 @@ export default function TemporaryDrawer({ open, onClose }) {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={onClose}>
       <List>
-        <ListItem button onClick={() => handleLinkClick("/About")}>
+      <ListItem button onClick={() => handleLinkClick("/")}>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItem>
+        <ListItem button onClick={() => handleLinkClick("/about")}>
           <ListItemIcon>
-            <HomeIcon />
+          <InfoIcon />
           </ListItemIcon>
           <ListItemText primary="About" />
         </ListItem>
@@ -38,12 +45,12 @@ export default function TemporaryDrawer({ open, onClose }) {
           </ListItemIcon>
           <ListItemText primary="Events" />
         </ListItem>
-        {/* <ListItem button onClick={() => handleLinkClick('/location')}>
+        <ListItem button onClick={() => handleLinkClick('/products')}>
           <ListItemIcon>
-            <LocationOnIcon />
+          <ShoppingBagIcon />
           </ListItemIcon>
-          <ListItemText primary="Location" />
-        </ListItem> */}
+          <ListItemText primary="Products" />
+        </ListItem>
         <ListItem button onClick={() => handleLinkClick('/contact')}>
           <ListItemIcon>
             <ContactMailIcon />
