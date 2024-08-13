@@ -9,7 +9,7 @@ const Home = () => {
       <Container className="container">
         <Box sx={{ textAlign: "center", mt: 5 }}>
           <Typography variant="h2" component="h1" gutterBottom>
-            Welcome to Ghost Gaming and Events!
+            Welcome to Ghost Events and Gaming!
           </Typography>
           <Typography variant="h5" component="h2" gutterBottom>
             Trading card store in Denver, Colorado.
