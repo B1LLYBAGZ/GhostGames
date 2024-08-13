@@ -8,8 +8,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
-import EventIcon from '@mui/icons-material/Event';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EventIcon from '@mui/icons-material/EventIcon';
+import InfoIcon from '@mui/icons-material/Info'
+import ProductsIcon from '@mui/icons-material/ProductsIcon'
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
@@ -46,7 +47,7 @@ export default function TemporaryDrawer({ open, onClose }) {
         </ListItem>
         <ListItem button onClick={() => handleLinkClick('/products')}>
           <ListItemIcon>
-            <LocationOnIcon />
+          <ProductsIcon />
           </ListItemIcon>
           <ListItemText primary="Products" />
         </ListItem>
