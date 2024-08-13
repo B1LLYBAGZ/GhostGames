@@ -5,9 +5,10 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../utils/helpers";
+import "../App.css";
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import "../App.css";
+
 
 
 
@@ -73,7 +74,7 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
   
     return (
       <>
-      <div className="app">
+      
       <Container className="container">
         <Box
           component="form"
@@ -124,7 +125,7 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
       
      
       </Container>
-      </div>
+      
       {/* Modal component */}
       <Modal
         open={isModalOpen}
@@ -142,6 +143,7 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
           <Button onClick={closeModal}>Close</Button>
         </Box>
       </Modal>
+      
       </>
   );
 }
