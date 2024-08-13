@@ -5,9 +5,10 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../utils/helpers";
+import "../App.css";
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import "../App.css";
+
 
 
 
@@ -27,17 +28,40 @@ export default function Contact() {
   const [formState, setFormState] = useState({customer_name: "", customer_email: "", message:""})
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+useEffect(() => {
+  emailjs.init({
+    publicKey: 'SeZxjP3mvHzojzQvf',
+    // Do not allow headless browsers
+    blockHeadless: true,
+    // blockList: {
+    //   // Block the suspended emails
+    //   list: ['foo@emailjs.com', 'bar@emailjs.com'],
+    //   // The variable contains the email address
+    //   watchVariable: 'userEmail',
+    // },
+    limitRate: {
+      // Set the limit rate for the application
+      id: 'app',
+      // Allow 1 request per 10s
+      throttle: 10000,
+    },
+  });
+}, [])
+
+
   const changeHandler = (e) => {
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
     setFormState({ ...formState, [inputType]: inputValue });
+    console.log(formState);
+    
   };
 
 
 const submitHandler = (e) => {
-  e.preventDefault;
+  e.preventDefault();
 emailjs.send("service_gz74o9s", "template_ea19oe4", formState);  
         console.log("Email successfully sent");
         setIsModalOpen(true);
@@ -50,12 +74,16 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
   
     return (
       <>
+      
       <Container className="container">
         <Box
           component="form"
           onSubmit={submitHandler}
           sx={{
-            textAlign: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
             mt: 5,
           }}
         >
@@ -97,9 +125,8 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
             </Button>
           </Box>
         </Box>
-      
-     
       </Container>
+      
       {/* Modal component */}
       <Modal
         open={isModalOpen}
@@ -117,6 +144,7 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
           <Button onClick={closeModal}>Close</Button>
         </Box>
       </Modal>
+      
       </>
   );
 }
