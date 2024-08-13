@@ -15,7 +15,7 @@ import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { useNavigate } from "react-router-dom";
 
-const theme = createTheme();
+// const theme = createTheme();
 
 export default function SignUp() {
   const navigate = useNavigate();
