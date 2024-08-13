@@ -5,8 +5,17 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
+import { useMutation } from '@apollo/client';
+import { ADD_TO_CART } from "../../utils/mutations";
 
 const ProductCard = ({ product }) => {
+
+  // const [addToCart, { data, loading, error }] = useMutation(ADD_TO_CART);
+
+  // const handleAddItem = () => {
+  //   addToCart({ variables: { productId: product._id } });
+  // };
+
   return (
     <Card sx={{ maxWidth: 345, margin: 2 }}>
       <CardMedia

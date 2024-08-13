@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import AboutPage from "./pages/About";
+import Cart from "./pages/Cart";
 import Footer from "./components/Footer/Footer"; // Import the Footer component
 import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
@@ -60,6 +61,7 @@ function App() {
                   <Route path="/login" element={<LogIn />} />
                   <Route path="/signup" element={<SignUp />} />
                   <Route path="/products" element={<Products />} />
+                  <Route path="/cart" element={<Cart />} />
                 </Routes>
               </div>
               <Footer />
