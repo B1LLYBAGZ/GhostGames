@@ -80,7 +80,10 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
           component="form"
           onSubmit={submitHandler}
           sx={{
-            textAlign: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
             mt: 5,
           }}
         >
@@ -122,8 +125,6 @@ emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
             </Button>
           </Box>
         </Box>
-      
-     
       </Container>
       
       {/* Modal component */}
