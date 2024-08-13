@@ -24,7 +24,6 @@ class AuthService {
 
   login(idToken, navigate) {
     localStorage.setItem("id_token", idToken);
-    navigate("/profile");
   }
 
   loggedIn(navigate) {

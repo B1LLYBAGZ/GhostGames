@@ -13,10 +13,12 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
-const SignUp = () => {
+export default function SignUp() {
+  const navigate = useNavigate();
   const [formState, setFormState] = React.useState({
     firstName: "",
     lastName: "",
@@ -42,7 +44,8 @@ const SignUp = () => {
       });
       const token = data.addUser.token;
       Auth.login(token);
-      // console.log("User created:", data);
+      console.log("User created:", data);
+      navigate("/");
       // Redirect or update the UI as needed
     } catch (e) {
       console.error(e);
@@ -80,7 +83,7 @@ const SignUp = () => {
                   required
                   fullWidth
                   id="firstName"
-                  label="first Name"
+                  label="First Name"
                   autoFocus
                   onChange={(e) =>
                     setFormState({ ...formState, firstName: e.target.value })
@@ -147,7 +150,7 @@ const SignUp = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
@@ -157,6 +160,4 @@ const SignUp = () => {
       </Container>
     </ThemeProvider>
   );
-};
-
-export default SignUp;
+}
