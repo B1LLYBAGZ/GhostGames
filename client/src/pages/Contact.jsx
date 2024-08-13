@@ -5,17 +5,11 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../utils/helpers";
-import "../App.css";
-
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import {useEffect, useState} from 'react';
-import emailjs from '@emailjs/browser'
-import { validateEmail } from '../utils/helpers';
-import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import "../App.css";
+
+
 
 const style = {
   position: 'absolute',
