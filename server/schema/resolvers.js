@@ -20,6 +20,7 @@ const resolvers = {
     },
     addToCart: async (parent, args) => {
       await Cart.create(args);
+      return true;
     },
   },
 };

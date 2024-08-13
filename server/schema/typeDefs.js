@@ -35,12 +35,12 @@ const typeDefs = gql`
       userName: String!
       email: String!
       password: String!
-    ): Auth,
+    ): Auth
     addToCart(
       user: String
       items: String
       cost: Int
-    )
+    ): Boolean
     }
     `;
 
