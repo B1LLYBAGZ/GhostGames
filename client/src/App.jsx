@@ -60,10 +60,6 @@ function App() {
                   <Route path="/login" element={<LogIn />} />
                   <Route path="/signup" element={<SignUp />} />
                   <Route path="/products" element={<Products />} />
-                  <Route
-                    path="*"
-                    element={<ErrorPage message="Page not found." />}
-                  />
                 </Routes>
               </div>
               <Footer />
