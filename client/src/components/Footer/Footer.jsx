@@ -37,7 +37,7 @@ const Footer = () => {
                 target="_blank"
                 color="inherit"
               >
-                <FacebookIcon />
+                <FacebookIcon style={{ fontSize: 50 }}  />
               </IconButton>
             </Paper>
           </Grid>

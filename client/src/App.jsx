@@ -9,7 +9,7 @@ import { setContext } from "@apollo/client/link/context";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import AboutPage from "./pages/About";
+import About from "./pages/About";
 import Footer from "./components/Footer/Footer"; // Import the Footer component
 import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
@@ -44,21 +44,24 @@ const client = new ApolloClient({
 function App() {
   return (
     <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Router>
-          <div className="app">
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/login" element={<LogIn />} />
-              <Route path="/signup" element={<SignUp />} />
-            </Routes>
-            <Footer />
-          </div>
-        </Router>
-      </ThemeProvider>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <div className="app">
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<LogIn />} />
+                <Route path="/signup" element={<SignUp />} />
+              </Routes>
+              <Footer />
+            </div>
+          </Router>
+        </ThemeProvider>
+      </ApolloProvider>
     </React.StrictMode>
   );
 }
