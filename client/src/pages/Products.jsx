@@ -12,6 +12,8 @@ const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
 
+
+
 const Products = () => {
   const [products, setProducts] = useState([]);
   const query = useQuery();
