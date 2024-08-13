@@ -48,26 +48,28 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Router>
-            <div className="app">
-              <Navbar />
-              <div className="container">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/Contact" element={<Contact />} />
-                  <Route path="/About" element={<AboutPage />} />
-                  <Route path="/login" element={<LogIn />} />
-                  <Route path="/signup" element={<SignUp />} />
-                  <Route path="/products" element={<Products />} />
+        <ApolloProvider client={client}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Router>
+              <div className="app">
+                <Navbar />
+                <div className="container">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/Contact" element={<Contact />} />
+                    <Route path="/About" element={<AboutPage />} />
+                    <Route path="/login" element={<LogIn />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/products" element={<Products />} />
                   <Route path="/cart" element={<Cart />} />
-                </Routes>
+                  </Routes>
+                </div>
+                <Footer />
               </div>
-              <Footer />
-            </div>
-          </Router>
-        </ThemeProvider>
+            </Router>
+          </ThemeProvider>
+        </ApolloProvider>
       </div>
     </div>
   );
