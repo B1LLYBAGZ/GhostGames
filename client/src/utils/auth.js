@@ -1,4 +1,4 @@
-import decode from "jwt-decode";
+// import decode from "jwt-decode";
 
 class AuthService {
   getProfile() {
@@ -19,7 +19,7 @@ class AuthService {
   }
 
   getToken() {
-    localStorage.getItem("id_token");
+   localStorage.getItem("id_token");
   }
 
   login(idToken, navigate) {

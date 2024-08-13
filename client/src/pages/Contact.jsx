@@ -5,25 +5,27 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../utils/helpers";
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import "../App.css";
 
-export default function Contact() {
-  const [formState, setFormState] = useState({
-    customer_name: "",
-    customer_email: "",
-    message: "",
-  });
 
-  useEffect(() => {
-    emailjs.init({
-      publicKey: "SeZxjP3mvHzojzQvf",
-      blockHeadless: true,
-      limitRate: {
-        id: "app",
-        throttle: 10000,
-      },
-    });
-  }, []);
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+export default function Contact() {
+  const [formState, setFormState] = useState({customer_name: "", customer_email: "", message:""})
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const changeHandler = (e) => {
     const { target } = e;
@@ -33,19 +35,21 @@ export default function Contact() {
     setFormState({ ...formState, [inputType]: inputValue });
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    if (!validateEmail(formState.customer_email) || !formState.message) {
-      console.log("Email and message are required");
-      return;
-    }
-    emailjs.send("service_gz74o9s", "template_ea19oe4", formState);
-    console.log("Email successfully sent");
-    setFormState({ customer_name: "", customer_email: "", message: "" });
-  };
 
-  return (
-    <div className="app">
+const submitHandler = (e) => {
+  e.preventDefault;
+emailjs.send("service_gz74o9s", "template_ea19oe4", formState);  
+        console.log("Email successfully sent");
+        setIsModalOpen(true);
+        setFormState({customer_name: "", customer_email: "", message:""})
+    };
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };  
+  
+  
+    return (
+      <>
       <Container className="container">
         <Box
           component="form"
@@ -93,7 +97,26 @@ export default function Contact() {
             </Button>
           </Box>
         </Box>
+      
+     
       </Container>
-    </div>
+      {/* Modal component */}
+      <Modal
+        open={isModalOpen}
+        onClose={closeModal}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography variant="h6" component="h2">
+            Message Sent Successfully!
+          </Typography>
+          <Typography sx={{ mt: 2 }}>
+            We will get back to you as soon as possible.
+          </Typography>
+          <Button onClick={closeModal}>Close</Button>
+        </Box>
+      </Modal>
+      </>
   );
 }
