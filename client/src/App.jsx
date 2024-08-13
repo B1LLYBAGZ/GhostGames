@@ -68,24 +68,6 @@ function App() {
         </ThemeProvider>
       </div>
     </div>
-    <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Router>
-          <div className="app">
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/login" element={<LogIn />} />
-              <Route path="/signup" element={<SignUp />} />
-            </Routes>
-            <Footer />
-          </div>
-        </Router>
-      </ThemeProvider>
-    </React.StrictMode>
   );
 }
 
