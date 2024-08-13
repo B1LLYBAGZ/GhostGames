@@ -82,6 +82,10 @@ export default function SearchAppBar() {
     navigate("/login");
   };
 
+  const handleCartClick = () => {
+    navigate("/cart")
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CustomAppBar position="static" className="navbar">
@@ -120,9 +124,10 @@ export default function SearchAppBar() {
           <Button variant="text" color="inherit">
             Logout
           </Button>
-          <IconButton color="inherit" aria-label="add to shopping cart">
-            <AddShoppingCartIcon />
-          </IconButton>
+          
+            <IconButton color="inherit" aria-label="add to shopping cart" onClick={handleCartClick}>
+              <AddShoppingCartIcon />
+            </IconButton>
           <Box
             component="form"
             onSubmit={handleSearchSubmit}

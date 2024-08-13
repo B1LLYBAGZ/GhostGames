@@ -19,3 +19,9 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_TO_CART = gql`
+  mutation addToCart($user: String, $items: String, $cost: Int) {
+    addToCart(user: $user, items: $items, cost: $cost)
+  }
+`;
