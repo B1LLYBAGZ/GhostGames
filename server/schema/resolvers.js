@@ -18,6 +18,11 @@ const resolvers = {
 
       return { token, user };
     },
+    login: async (parent, { email }) => {
+      const user = await User.findOne({ email });
+      const token = signToken(user);
+      return { token, user };
+    },
     addToCart: async (parent, args) => {
       await Cart.create(args);
       return true;

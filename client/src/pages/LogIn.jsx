@@ -13,19 +13,37 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Copyright from "../components/Copyright/Copyright.jsx"; // Import the Copyright component
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations.js";
+import Auth from "../utils/auth";
 
 const defaultTheme = createTheme(); // Define the default theme
 
 export default function SignIn() {
-  // const navigate = useNavigate();
-  const handleSubmit = (event) => {
+  const navigate = useNavigate();
+  const [login, { error }] = useMutation(LOGIN_USER);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get("email");
+    const password = formData.get("password");
+    console.log(email);
+    console.log(password);
+
+    try {
+      const { data } = await login({
+        variables: { email, password },
+      });
+      const token = data.login.token;
+      Auth.login(token);
+      navigate("/");
+
+      // const userId = data.signInUser._id;
+    } catch (error) {
+      console.error("Error signing in:", error.message);
+    }
   };
 
   return (
