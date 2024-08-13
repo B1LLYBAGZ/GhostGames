@@ -33,11 +33,13 @@ export default function Contact() {
     const inputValue = target.value;
 
     setFormState({ ...formState, [inputType]: inputValue });
+    console.log(formState);
+    
   };
 
 
 const submitHandler = (e) => {
-  e.preventDefault;
+  e.preventDefault();
 emailjs.send("service_gz74o9s", "template_ea19oe4", formState);  
         console.log("Email successfully sent");
         setIsModalOpen(true);
