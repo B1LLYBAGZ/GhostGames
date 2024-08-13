@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -13,21 +12,6 @@ import EventIcon from '@mui/icons-material/Event';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
-=======
-import React from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
-import EventIcon from "@mui/icons-material/Event";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
->>>>>>> main
 
 export default function TemporaryDrawer({ open, onClose }) {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -54,22 +38,13 @@ export default function TemporaryDrawer({ open, onClose }) {
           </ListItemIcon>
           <ListItemText primary="Events" />
         </ListItem>
-<<<<<<< HEAD
         {/* <ListItem button onClick={() => handleLinkClick('/location')}>
-=======
-        <ListItem button onClick={() => handleLinkClick("/location")}>
->>>>>>> main
           <ListItemIcon>
             <LocationOnIcon />
           </ListItemIcon>
           <ListItemText primary="Location" />
-<<<<<<< HEAD
         </ListItem> */}
         <ListItem button onClick={() => handleLinkClick('/contact')}>
-=======
-        </ListItem>
-        <ListItem button onClick={() => handleLinkClick("/contact")}>
->>>>>>> main
           <ListItemIcon>
             <ContactMailIcon />
           </ListItemIcon>
