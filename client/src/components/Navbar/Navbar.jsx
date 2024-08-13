@@ -78,6 +78,10 @@ export default function SearchAppBar() {
     navigate(`/products?search=${searchQuery}`);
   };
 
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CustomAppBar position="static" className="navbar">
@@ -110,7 +114,7 @@ export default function SearchAppBar() {
           >
             {/* Ghost Events and Gaming */}
           </Typography>
-          <Button variant="text" color="inherit">
+          <Button variant="text" color="inherit" onClick={handleLoginClick}>
             Login
           </Button>
           <Button variant="text" color="inherit">
