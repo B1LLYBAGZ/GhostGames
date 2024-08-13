@@ -36,12 +36,8 @@ const typeDefs = gql`
       email: String!
       password: String!
     ): Auth
-    addToCart(
-      user: String
-      items: String
-      cost: Int
-    ): Boolean
-    }
-    `;
+    addToCart(user: String, items: String, cost: Int): String
+  }
+`;
 
 module.exports = typeDefs;
