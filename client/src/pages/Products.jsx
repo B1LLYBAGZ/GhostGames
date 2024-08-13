@@ -1,18 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import ProductCard from "../components/Products/ProductCard";
-import Typography from "@mui/material/Typography"; // Import Typography
+import ProductCard from "../components/Products/ProductCard.jsx";
 import productsData from "../../../server/seeders/productSeeds.json"; // Import the JSON data
 import "../App.css"; // Ensure this is the path to your common CSS file
+import { useLocation } from "react-router-dom";
+import Typography from "@mui/material/Typography"; // Import Typography
+
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const query = useQuery();
+  const searchQuery = query.get("search") || "";
 
   useEffect(() => {
-    // Set the products state with the imported JSON data
-    setProducts(productsData);
-  }, []);
+    // Filter products based on search query
+    const filteredProducts = productsData.filter((product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setProducts(filteredProducts);
+  }, [searchQuery]);
 
   return (
     <div className="app">
