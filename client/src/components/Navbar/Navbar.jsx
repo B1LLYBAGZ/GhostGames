@@ -1,4 +1,4 @@
-// import * as React from 'react';
+
 import React, { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 
@@ -13,6 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import TemporaryDrawer from "./TemporaryDrawer";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./Navbar.css"; // Import the CSS file
 
 const Search = styled("div")(({ theme }) => ({
@@ -82,11 +83,13 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton>
 
-          <img
-            src="../../img/bestLogo.png"
-            alt="Logo"
-            style={{ width: "200px", height: "auto" }}
-          />
+          <Link to="/">
+            <img
+              src="../../img/bestLogo.png"
+              alt="Logo"
+              style={{ width: "200px", height: "auto" }}
+            />
+          </Link>
           <Typography
             variant="h1"
             noWrap
