@@ -27,6 +27,27 @@ export default function Contact() {
   const [formState, setFormState] = useState({customer_name: "", customer_email: "", message:""})
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+useEffect(() => {
+  emailjs.init({
+    publicKey: 'SeZxjP3mvHzojzQvf',
+    // Do not allow headless browsers
+    blockHeadless: true,
+    // blockList: {
+    //   // Block the suspended emails
+    //   list: ['foo@emailjs.com', 'bar@emailjs.com'],
+    //   // The variable contains the email address
+    //   watchVariable: 'userEmail',
+    // },
+    limitRate: {
+      // Set the limit rate for the application
+      id: 'app',
+      // Allow 1 request per 10s
+      throttle: 10000,
+    },
+  });
+}, [])
+
+
   const changeHandler = (e) => {
     const { target } = e;
     const inputType = target.name;
