@@ -15,6 +15,7 @@ import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
 import SignUp from "./pages/SignUp"; // Importing the SignUp
 import Products from "./pages/Products"; // Importing the Products page
+import ErrorPage from "./pages/Error"; // Importing the ErrorPage component
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@mui/material/styles";
@@ -59,6 +60,10 @@ function App() {
                   <Route path="/login" element={<LogIn />} />
                   <Route path="/signup" element={<SignUp />} />
                   <Route path="/products" element={<Products />} />
+                  <Route
+                    path="*"
+                    element={<ErrorPage message="Page not found." />}
+                  />
                 </Routes>
               </div>
               <Footer />
