@@ -20,6 +20,42 @@ export const ADD_USER = gql`
   }
 `;
 
+export const UPDATE_USER = gql`
+  mutation updateUser(
+    $id: ID!
+    $firstName: String
+    $lastName: String
+    $userName: String
+    $email: String
+    $password: String
+  ) {
+    updateUser(
+      id: $id
+      firstName: $firstName
+      lastName: $lastName
+      userName: $userName
+      email: $email
+      password: $password
+    ) {
+      id
+      firstName
+      lastName
+      userName
+      email
+      token
+    }
+  }
+`;
+
+export const DELETE_USER = gql`
+  mutation deleteUser($id: ID!) {
+    deleteUser(id: $id) {
+      id
+      message
+    }
+  }
+`;
+
 export const ADD_TO_CART = gql`
   mutation AddToCart($userId: ID!, $productId: ID!) {
     addToCart(userId: $userId, productId: $productId) {
