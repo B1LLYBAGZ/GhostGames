@@ -6,7 +6,6 @@ html,
   padding: 0;
   display: flex;
   flex-direction: column;
-  place-items: inherit !important;
 }
 
 body {
@@ -126,4 +125,27 @@ body {
   .read-the-docs {
     font-size: 0.9em;
   }
+}
+
+/* Apply the same color theme to the login page */
+.login-page {
+  background-color: var(--mine-shaft) !important;
+  color: var(--silver-sand) !important;
+  font-family: "Audiowide", sans-serif !important;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-page .container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--silver-sand);
+  color: var(--black);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
