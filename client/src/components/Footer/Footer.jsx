@@ -30,7 +30,7 @@ const Footer = () => {
                 <Typography variant="body1">
                   Store Number:{" "}
                   <Link href="tel:+7209551957" color="inherit">
-                    +17209551957
+                    +1(720)955-1957
                   </Link>
                 </Typography>
                 </Box>
