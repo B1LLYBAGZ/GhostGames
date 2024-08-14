@@ -71,7 +71,6 @@ export const ADD_TO_CART = gql`
 export const REMOVE_FROM_CART = gql`
   mutation removeFromCart($productId: ID!) {
     removeFromCart(productId: $productId) {
-      user
       items {
         name
         price
