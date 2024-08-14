@@ -8,6 +8,12 @@ html,
   flex-direction: column;
 }
 
+.about-h1,
+.about-h2,
+.about-questions {
+  color:var(--harlequin);
+}
+
 body {
   display: flex;
   flex-direction: column;

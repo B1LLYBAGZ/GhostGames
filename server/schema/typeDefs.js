@@ -18,12 +18,16 @@ const typeDefs = gql`
     stock: Int
   }
 
+  type CartItem {
+    id: ID!
+    product: Product!
+    quantity: Int!
+  }
+
   type Cart {
     _id: ID
-    user: ID
-    items: [Product!]!
+    items: [CartItem!]!
     cost: Float!
-    createdAt: String!
   }
 
   type Auth {
@@ -46,8 +50,8 @@ const typeDefs = gql`
       password: String!
     ): Auth
     login(email: String!, password: String!): Auth
-    addToCart(productId: ID!): Cart
-    removeFromCart(productId: ID!): Cart
+    addToCart(productId: ID!, quantity: Int!): CartItem!
+    removeFromCart(productId: ID!, quantity: Int!): CartItem!
   }
 `;
 

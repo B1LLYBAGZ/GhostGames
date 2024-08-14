@@ -57,27 +57,29 @@ export const DELETE_USER = gql`
 `;
 
 export const ADD_TO_CART = gql`
-  mutation addToCart($productId: ID!) {
-    addToCart(productId: $productId) {
-      items {
+  mutation AddToCart($productId: ID!, $quantity: Int!) {
+    addToCart(productId: $productId, quantity: $quantity) {
+      id
+      product {
         name
         price
       }
-      cost
+      quantity
     }
   }
 `;
 
 export const REMOVE_FROM_CART = gql`
-  mutation removeFromCart($productId: ID!) {
-    removeFromCart(productId: $productId) {
-      items {
+  mutation RemoveFromCart($productId: ID!, $quantity: Int!) {
+    removeFromCart(productId: $productId, quantity: $quantity) {
+      id
+      product {
         name
         price
       }
-      cost
+      quantity
     }
-}
+  }
 `;
 
 export const LOGIN_USER = gql`

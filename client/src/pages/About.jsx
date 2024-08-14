@@ -15,31 +15,31 @@ export default function AboutPage() {
 
   return (
     <div className="about-page">
-      <h1>NOT a Ghost of His Former Self</h1>
+      <h1 className="about-h1">NOT a Ghost of His Former Self</h1>
       <section id="about-content">
-        <h2>Ghost Events & Gaming</h2>
+        <h2 className="about-h2">Ghost Events & Gaming</h2>
         <p>
-          <strong>What's his name? </strong>
+          <strong className="about-questions">What's his name? </strong>
           {info.name}
         </p>
         <p>
-          <strong>What does he do? </strong>
+          <strong className="about-questions">What does he do? </strong>
           {info.role}
         </p>
         <p>
-          <strong>Who is he? </strong>
+          <strong className="about-questions">Who is he? </strong>
           {info.bio}
         </p>
         <p>
-          <strong>What does he like? </strong>
+          <strong className="about-questions">What does he like? </strong>
           {info.hobbies}
         </p>
         <p>
-          <strong>Why create Ghost Gaming? </strong>
+          <strong className="about-questions">Why create Ghost Gaming? </strong>
           {info.shopCreation}
         </p>
         <p>
-          <strong>What does the future have in "store"? </strong>
+          <strong className="about-questions">What does the future have in "store"? </strong>
           {info.goals}
         </p>
       </section>
