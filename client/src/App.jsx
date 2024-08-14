@@ -16,6 +16,7 @@ import "./App.css";
 import LogIn from "./pages/LogIn"; // Importing the LogIn
 import SignUp from "./pages/SignUp"; // Importing the SignUp
 import Products from "./pages/Products"; // Importing the Products page
+import CalendarPage from "./pages/CalendarPage"
 import ErrorPage from "./pages/Error"; // Importing the ErrorPage component
 import React from "react";
 import ReactDOM from "react-dom";
@@ -63,6 +64,7 @@ function App() {
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/products" element={<Products />} />
                   <Route path="/cart" element={<Cart />} />
+                  <Route path="/calendar" element={<CalendarPage />} />
                   </Routes>
                 </div>
                 <Footer />
