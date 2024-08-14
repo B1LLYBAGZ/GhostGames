@@ -10,13 +10,13 @@ const CalendarComponent = () => {
   const events = [
     {
       title: "Pokémon Tournament",
-      start: new Date(2023, 9, 10, 10, 0), // Year, Month (0-indexed), Day, Hour, Minute
-      end: new Date(2023, 9, 10, 12, 0),
+      start: new Date(2024, 9, 10, 10, 0), // Year, Month (0-indexed), Day, Hour, Minute
+      end: new Date(2024, 9, 10, 12, 0),
     },
     {
       title: "Yu-Gi-Oh! Duel",
-      start: new Date(2023, 9, 11, 14, 0),
-      end: new Date(2023, 9, 11, 16, 0),
+      start: new Date(2024, 9, 11, 14, 0),
+      end: new Date(2024, 9, 11, 16, 0),
     },
     // Add more events as needed
   ];
@@ -34,7 +34,7 @@ const CalendarComponent = () => {
           endAccessor="end"
           views={["week"]}
           defaultView="week"
-          style={{ height: 100 }}
+          style={{ height: 300 }}
         />
       </Paper>
     </Box>
