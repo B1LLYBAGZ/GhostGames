@@ -1,11 +1,11 @@
+// user: {
+//   type: Schema.Types.ObjectId,
+//   ref: "User",
+//   required: true,
+// },
 const { Schema, model } = require("mongoose");
 
 const cartSchema = new Schema({
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
-  },
   items: [
     {
       type: Schema.Types.ObjectId,
