@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
@@ -85,8 +84,8 @@ export default function SearchAppBar() {
   };
 
   const handleCartClick = () => {
-    navigate("/cart")
-  }
+    navigate("/cart");
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -105,7 +104,7 @@ export default function SearchAppBar() {
 
           <Link to="/">
             <img
-              src="../../img/bestLogo.png"
+              src="../../../img/bestLogo.png"
               alt="Logo"
               style={{ width: "200px", height: "auto" }}
             />
@@ -128,10 +127,14 @@ export default function SearchAppBar() {
           <Button variant="text" color="inherit">
             Logout
           </Button>
-          
-            <IconButton color="inherit" aria-label="add to shopping cart" onClick={handleCartClick}>
-              <AddShoppingCartIcon />
-            </IconButton>
+
+          <IconButton
+            color="inherit"
+            aria-label="add to shopping cart"
+            onClick={handleCartClick}
+          >
+            <AddShoppingCartIcon />
+          </IconButton>
           <Box
             component="form"
             onSubmit={handleSearchSubmit}
