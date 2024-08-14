@@ -7,6 +7,26 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 const CalendarComponent = () => {
   const localizer = momentLocalizer(moment);
 
+     // Function to generate recurring events
+     const generateRecurringEvents = (title, start, end, recurrenceRule) => {
+      const recurringEvents = [];
+      const startDate = moment(start);
+      const endDate = moment(end);
+  
+      while (startDate.isBefore(endDate)) {
+          recurringEvents.push({
+            title: title,
+            start: startDate.toDate(),
+            end: moment(startDate).add(2, 'hours').toDate(), // Assuming 2-hour duration
+          });
+    
+          startDate.add(recurrenceRule.interval, recurrenceRule.unit);
+        }
+    
+        return recurringEvents;
+      };
+  
+
   const events = [
     {
       title: "Pokémon Tournament",
@@ -18,7 +38,12 @@ const CalendarComponent = () => {
       start: new Date(2024, 9, 11, 14, 0),
       end: new Date(2024, 9, 11, 16, 0),
     },
-    // Add more events as needed
+       // Add recurring events using the generateRecurringEvents function 
+       ...generateRecurringEvents("Yugi Tournament", new Date(2024, 7, 5, 18, 30), new Date(2025, 0, 6, 18, 30), { interval: 1, unit: 'weeks' }),
+       ...generateRecurringEvents("Yugi Tournament", new Date(2024, 7, 7, 18, 30), new Date(2025, 0, 8, 18, 30), { interval: 1, unit: 'weeks' }),
+       ...generateRecurringEvents("Yugi Tournament", new Date(2024, 7, 9, 18, 30), new Date(2025, 0, 10, 18, 30), { interval: 1, unit: 'weeks' }),
+       ...generateRecurringEvents("Timewizard", new Date(2024, 7, 10, 14, 0), new Date(2025, 0, 11, 14, 0), { interval: 1, unit: 'weeks' })
+      
   ];
 
   return (
@@ -34,7 +59,9 @@ const CalendarComponent = () => {
           endAccessor="end"
           views={["week"]}
           defaultView="week"
-          style={{ height: 300 }}
+          style={{ height: 350 }}
+          min={new Date(0, 0, 0, 12, 0)} // Set the minimum time to start at noon
+          max={new Date(0, 0, 0, 22, 59)} // Set the maximum time to end at 11:59 PM
         />
       </Paper>
     </Box>

@@ -41,7 +41,7 @@ const CalendarPage = () => {
     ...generateRecurringEvents("Yugi Tournament", new Date(2024, 7, 5, 18, 30), new Date(2025, 0, 6, 18, 30), { interval: 1, unit: 'weeks' }),
     ...generateRecurringEvents("Yugi Tournament", new Date(2024, 7, 7, 18, 30), new Date(2025, 0, 8, 18, 30), { interval: 1, unit: 'weeks' }),
     ...generateRecurringEvents("Yugi Tournament", new Date(2024, 7, 9, 18, 30), new Date(2025, 0, 10, 18, 30), { interval: 1, unit: 'weeks' }),
-    ...generateRecurringEvents("Timewizard", new Date(2024, 7, 10, 2, 0), new Date(2025, 0, 11, 2, 0), { interval: 1, unit: 'weeks' })
+    ...generateRecurringEvents("Timewizard", new Date(2024, 7, 10, 14, 0), new Date(2025, 0, 11, 14, 0), { interval: 1, unit: 'weeks' })
    
   ];
 
