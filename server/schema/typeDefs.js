@@ -12,9 +12,9 @@ const typeDefs = gql`
 
   type Product {
     _id: ID!
-    name: String!
+    name: String
     description: String
-    price: Int!
+    price: Float
     stock: Int
   }
 
@@ -33,6 +33,7 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
+    products: [Product]
     getCart(userId: ID!): Cart
   }
 
@@ -45,8 +46,8 @@ const typeDefs = gql`
       password: String!
     ): Auth
     login(email: String!, password: String!): Auth
-    addToCart(userId: ID!, productId: ID!): Cart
-    removeFromCart(userId: ID!, productId: ID!): Cart
+    addToCart(productId: ID!): Cart
+    removeFromCart(productId: ID!): Cart
   }
 `;
 

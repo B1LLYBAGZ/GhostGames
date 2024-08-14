@@ -10,11 +10,11 @@ import { ADD_TO_CART } from "../../utils/mutations";
 
 const ProductCard = ({ product }) => {
 
-  // const [addToCart, { data, loading, error }] = useMutation(ADD_TO_CART);
+  const [addToCart, { data, loading, error }] = useMutation(ADD_TO_CART);
 
-  // const handleAddItem = () => {
-  //   addToCart({ variables: { productId: product._id } });
-  // };
+  const handleAddItem = () => {
+    addToCart({ variables: { productId: product._id } });
+  };
 
   return (
     <Card sx={{ maxWidth: 345, margin: 2 }}>
@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Add to Cart</Button>
+        <Button size="small" onClick={handleAddItem}>Add to Cart</Button>
       </CardActions>
     </Card>
   );
