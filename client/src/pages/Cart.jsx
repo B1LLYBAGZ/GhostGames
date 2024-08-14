@@ -5,10 +5,7 @@ import {
 import { Add, Remove, Delete } from '@mui/icons-material';
 
 const CartPage = () => {
-  const cartItems = [
-    { id: 1, name: 'Product 1', price: 20 },
-    { id: 2, name: 'Product 2', price: 35 },
-  ];
+  const cartItems = [];
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
 

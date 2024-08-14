@@ -21,9 +21,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_TO_CART = gql`
-  mutation addToCart($userId: ID!, $productId: ID!) {
-    addToCart(userId: $userId, productId: $productId) {
-      user
+  mutation addToCart($productId: ID!) {
+    addToCart(productId: $productId) {
       items {
         name
         price
@@ -34,8 +33,8 @@ export const ADD_TO_CART = gql`
 `;
 
 export const REMOVE_FROM_CART = gql`
-  mutation removeFromCart($userId: ID!, $productId: ID!) {
-    removeFromCart(userId: $userId, productId: $productId) {
+  mutation removeFromCart($productId: ID!) {
+    removeFromCart(productId: $productId) {
       user
       items {
         name
