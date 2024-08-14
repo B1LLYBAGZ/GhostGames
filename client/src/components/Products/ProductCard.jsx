@@ -9,11 +9,22 @@ import { useMutation } from '@apollo/client';
 import { ADD_TO_CART } from "../../utils/mutations";
 
 const ProductCard = ({ product }) => {
-
+  // Define the mutation hook
   const [addToCart, { data, loading, error }] = useMutation(ADD_TO_CART);
 
-  const handleAddItem = () => {
-    addToCart({ variables: { productId: product._id } });
+  // Handle the button click event
+  const handleAddToCart = async () => {
+    try {
+      // Call the mutation function with the product ID and a quantity of 1
+      const response = await addToCart({
+        variables: { productId: product._id, quantity: 1 },
+      });
+      console.log('Added to cart:', response.data.addToCart);
+      // Optionally, handle success (e.g., show a message or update state)
+    } catch (err) {
+      console.error('Error adding to cart:', err);
+      // Optionally, handle error (e.g., show an error message)
+    }
   };
 
   return (
@@ -39,7 +50,10 @@ const ProductCard = ({ product }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={handleAddItem}>Add to Cart</Button>
+        <Button size="small" onClick={handleAddToCart} disabled={loading}>
+          {loading ? 'Adding...' : 'Add to Cart'}
+        </Button>
+        {error && <Typography color="error">Error adding to cart</Typography>}
       </CardActions>
     </Card>
   );
