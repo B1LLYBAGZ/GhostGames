@@ -15,4 +15,7 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    outDir: "dist", // Ensure this matches the publish directory
+  },
 });
