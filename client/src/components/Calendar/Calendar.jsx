@@ -59,8 +59,8 @@ const CalendarComponent = () => {
           endAccessor="end"
           views={["week"]}
           defaultView="week"
-          style={{ height: 350 }}
-          min={new Date(0, 0, 0, 12, 0)} // Set the minimum time to start at noon
+          style={{ height: 300 }}
+          min={new Date(0, 0, 0, 10, 0)} // Set the minimum time to start at noon
           max={new Date(0, 0, 0, 22, 59)} // Set the maximum time to end at 11:59 PM
         />
       </Paper>
