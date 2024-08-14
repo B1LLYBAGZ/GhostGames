@@ -18,9 +18,12 @@ const resolvers = {
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
-
       const token = signToken(user);
-
+      return { token, user };
+    },
+    login: async (parent, { email }) => {
+      const user = await User.findOne({ email });
+      const token = signToken(user);
       return { token, user };
     },
     // Mutation to add an item to the cart
