@@ -18,6 +18,13 @@ const typeDefs = gql`
     stock: Int
   }
 
+  type Yugioh {
+    _id: iD!
+    name: String
+    price: Float
+    stock: Int
+  }
+
   type CartItem {
     id: ID!
     product: Product!
@@ -38,6 +45,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     products: [Product]
+    yugiCards: [Yugioh]
     getCart(userId: ID!): Cart
   }
 
